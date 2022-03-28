@@ -1,0 +1,454 @@
+﻿:root {
+  --bs-danger-rgb: 220, 53, 69;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-body-font-family: Merriweather, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* LINEAS BAJO LOS TITULOS */
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+}
+hr:not([size]) {
+  height: 1px;
+}
+/* TITULOS */
+h2,.h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+h3,.h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+/* SEPARADOR DE IMAGENES EN BLOQUE */
+img,svg {
+  vertical-align: middle;
+}
+/* SEPARADOR DE TABLAS */
+table {
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+/* TAMAÑO CENTRADO DE TABLA Y TITULOS */
+.container,.container-fluid,.container-xxl,.container-xl,.container-lg,.container-md,.container-sm {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 1400px) {
+  .container-xxl,.container-xl,.container-lg,.container-md,  .container-sm,  .container {
+    max-width: 1320px;
+  }
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+.row>* {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+/* SEPARACION IMAGENES */
+.g-0,.gx-0 {
+  --bs-gutter-x: 0;
+}
+/* FOTOS Y TEXTO ALINEADO */
+@media (min-width: 992px) {
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+  .col-lg-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+}
+/* ESTILO TABLAS */
+.table> :not(caption)>*>* {
+  padding: 0.5rem 0.5rem;
+  background-color: var(--bs-table-bg);
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+.table-hover>tbody>tr:hover>* {
+  --bs-table-accent-bg: var(--bs-table-hover-bg);
+  color: var(--bs-table-hover-color);
+}
+.table-dark {
+  --bs-table-bg: #212529;
+  --bs-table-striped-bg: #2c3034;
+  --bs-table-striped-color: #fff;
+  --bs-table-active-bg: #373b3e;
+  --bs-table-active-color: #fff;
+  --bs-table-hover-bg: #323539;
+  --bs-table-hover-color: #fff;
+  color: #fff;
+  border-color: #373b3e;
+}
+/* VISTA DE LA BARRA DE NAVEGACION */
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #f4623a;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.navbar>.container,.navbar>.container-fluid,.navbar>.container-sm,.navbar>.container-md,.navbar>.container-lg,.navbar>.container-xl,.navbar>.container-xxl {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: box-shadow 0.15s ease-in-out;
+}
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+/* ALINEADO DE TITULOS */
+.h-100 {
+  height: 100% !important;
+}
+.justify-content-center {
+  justify-content: center !important;
+}
+.align-self-end {
+  align-self: flex-end !important;
+}
+.align-self-baseline {
+  align-self: baseline !important;
+}
+/* BARRA DE NAVEGACION */
+.my-2 {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+/* TEXTO */
+.text-center {
+  text-align: center !important;
+}
+.text-white {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+}
+/* COLOR DE LA TABLA */
+.bg-info {
+  --bs-bg-opacity: 1;
+  background-color: rgba(0, 17, 255, 0.829) !important;
+}
+.bg-danger {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+}
+/* SECCION SPIDERVERSE */
+.page-section {
+  padding: 5rem 0;
+  padding-top: 300px;
+}
+/* TEXTO */
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+/* ESTILOS  DE BARRA DIVISORA */
+hr.divider {
+  height: 0.2rem;
+  max-width: 80rem;
+  margin: 0.5rem auto;
+  background-color: #008000;
+  opacity: 1;
+}
+hr.divider-light {
+  background-color: #fff;
+}
+/* CSS EQUIVALENTE A LA BARRA DE NAVEGACION */
+#mainNav .navbar-nav .nav-item .nav-link {
+  color: #6c757d;
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.75rem 0;
+}
+#mainNav .navbar-nav .nav-item .nav-link.active {
+  color: #ff0000 !important;
+}
+@media (min-width: 992px) {
+  #mainNav {
+    box-shadow: none;
+    background-color: transparent;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0 1rem;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: #ffffff;
+  }
+  #mainNav.navbar-shrink {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.705);
+  }
+  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+    color: #212529;
+  }
+  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
+    color: #ff0000;
+  }
+}
+/* CSS EQUIVALENTE A LA IMAGEN PRINCIPAL */
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(40, 145, 32) 0%, rgba(255, 0, 0, 0.2) 100%), url("../assets/img/fondosacodeje.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+@media (min-width: 992px) {
+  header.masthead {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  header.masthead p {
+    font-size: 1.15rem;
+  }
+  header.masthead h1,
+  header.masthead .h1 {
+    font-size: 3rem;
+  }
+}
+/* CSS EQUIVALENTE A LAS IMAGENES DE LOS EVENTOS */
+#eventos .container-fluid, #eventos .container-sm, #eventos .container-md, #eventos .container-lg, #eventos .container-xl, #eventos .container-xxl {
+  max-width: 1920px;
+}
+#eventos .container-fluid .eventos-box, #eventos .container-sm .eventos-box, #eventos .container-md .eventos-box, #eventos .container-lg .eventos-box, #eventos .container-xl .eventos-box, #eventos .container-xxl .eventos-box {
+  position: relative;
+  display: block;
+}
+#eventos .container-fluid .eventos-box .eventos-box-caption, #eventos .container-sm .eventos-box .eventos-box-caption, #eventos .container-md .eventos-box .eventos-box-caption, #eventos .container-lg .eventos-box .eventos-box-caption, #eventos .container-xl .eventos-box .eventos-box-caption, #eventos .container-xxl .eventos-box .eventos-box-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  background: rgba(40, 145, 32);
+  transition: opacity 0.25s ease;
+  text-align: center;
+}
+#eventos .container-fluid .eventos-box .eventos-box-caption .project-category, #eventos .container-sm .eventos-box .eventos-box-caption .project-category, #eventos .container-md .eventos-box .eventos-box-caption .project-category, #eventos .container-lg .eventos-box .eventos-box-caption .project-category, #eventos .container-xl .eventos-box .eventos-box-caption .project-category, #eventos .container-xxl .eventos-box .eventos-box-caption .project-category {
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.85rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+#eventos .container-fluid .eventos-box .eventos-box-caption .project-name, #eventos .container-sm .eventos-box .eventos-box-caption .project-name, #eventos .container-md .eventos-box .eventos-box-caption .project-name, #eventos .container-lg .eventos-box .eventos-box-caption .project-name, #eventos .container-xl .eventos-box .eventos-box-caption .project-name, #eventos .container-xxl .eventos-box .eventos-box-caption .project-name {
+  font-size: 1.2rem;
+}
+#eventos .container-fluid .eventos-box:hover .eventos-box-caption, #eventos .container-sm .eventos-box:hover .eventos-box-caption, #eventos .container-md .eventos-box:hover .eventos-box-caption, #eventos .container-lg .eventos-box:hover .eventos-box-caption, #eventos .container-xl .eventos-box:hover .eventos-box-caption, #eventos .container-xxl .eventos-box:hover .eventos-box-caption {
+  opacity: 1;
+}
+
+
+#VISION {
+  background: linear-gradient(to bottom, rgba(0, 0, 255, 0.1) 0%, rgba(0, 0, 255, 0.4) 100%), url("../assets/img/");
+  background-size: cover;
+}
+/* CSS EQUIVALENTE A LAA IMAGEN DE SPIDERVERSE */
+#MISION {
+  background: linear-gradient(to bottom, rgba(40, 145, 32 ) 0%, rgba(40, 145, 32 ) 100%), url("../assets/img/");
+  background-size: cover;
+}
+#HIMNO{
+  background: linear-gradient(to bottom, rgba(40, 145, 32 ) 0%, rgba(40, 145, 32 ) 100%), url("../assets/img/");
+  background-size: cover;
+}
+/* CSS EQUIVALENTE A EL TAMAÑO DE LAS IMAGENES PEQUEÑAS */
+#playSp,#blackSp,#andrewSp,#tobeySp,#tomSp,#ironSp{
+  width: 100%;
+  height: 360px;
+}
+#otto,#sandman,#electro,#venom,#mysterio,#duendeverde {
+  width: 100%;
+  height: 500px;
+}
+#tituloeventos {
+  width: 100%;
+}
+#cuadroeventos,#cuadroTrajes{
+  padding: 0;
+}
+.project-name{
+    font-weight: 800;
+    font-family: monospace;
+    font-style: italic;
+}
+#textoSpv{
+  font-size: 25px;
+  font-weight: 800;
+  font-style: italic;
+}
+#contact{
+  padding-top: 0; 
+  padding-bottom: 0;
+}
+.contenedor{
+    width: 100%;
+    overflow: hidden;
+    background-image: url("../assets/img/fondoactores.jpg");
+    border-radius: 7px;
+}
+
+.slider-contenedor{
+    width: 100%;
+    display: flex;
+}
+
+.contenido-slider{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.contenido-slider:nth-child(2){
+    background: ;
+    color: ;
+}
+
+.contenido-slider:nth-child(3){
+    background: ;
+}
+
+.contenido-slider > img{
+    width: 400px;
+}
+
+.contenido-slider > div{
+    width: 40%;
+}
+
+.contenido-slider h2{
+    font-weight: 300;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.contenido-slider a{
+    color: #fff;
+    background: #332863;
+    width: 100px;
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.contenido-slider:nth-child(2) a{
+    background: #fff;
+    color: #332863;
+    
+}
+
+@media screen and (max-width:900px){
+    .contenido-slider > img{
+        width: 250px;
+    }
+
+    .contenido-slider > div{
+        width: 40%;
+    }
+
+    .contenido-slider h2{
+        font-size: 23px;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    .contenido-slider{
+       flex-direction: column-reverse;
+    }
+
+    .contenido-slider > div{
+        width: 80%;
+    }
+
+}
+.actores{
+  border-radius: 15px;
+}
+#footer{
+  margin-right: -50px;
+  background-color: #dbd8d9;
+   font-style: italic;
+}
